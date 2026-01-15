@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: faq-inteligente
+  data:
+    mongodb:
+      uri: ${MONGODB_URI:mongodb://localhost:27017/faq-db}
+
+jwt:
+  secret: ${JWT_SECRET:ThisIsSecretForJWTHS512SignatureAlgorithmThatMUSTHave512bitsKeySize}
+  expiration: ${JWT_EXPIRATION:28800}
+
+ollama:
+  url: ${OLLAMA_URL:http://localhost:11434}
+  model: ${OLLAMA_MODEL:mxbai-embed-large}
+
+qdrant:
+  url: ${QDRANT_URL:http://localhost:6333}
+  collection: faqs
